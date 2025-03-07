@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-      .timer  {
+      .time-offer .timer  {
         font-weight: 900 !important;
-        position: absolute;
-        width: 58vh;
-        transform: translate(44em, 4em) !important;
+        position: relative;
+        transform: translate(38em, -22em) ;
         color: rgba(250, 12, 12, 0.881);
         background-color: transparent;
         display: inline-flex;
+        height: fit-content;
+        margin: 0;
+        
       } 
       .timer h1 {
         padding-top: 6px;
@@ -24,15 +26,126 @@
 
       .time-offer {
         background: linear-gradient(135deg, rgb(181, 244, 65), rgb(17, 244, 150));
+        margin: 0;
+        padding: 0;
+        height: 403px;
+       
+        
       }
-      .flat {
+      .time-offer .flat {
         color: green;
+        transform:translate(22em, -14em);
+        background: transparent;
+        padding: 0px;
+        margin: 0px;
+        
+        width: fit-content;
+        font-size: 23px;
+
+        
       }
 
       .marq {
         align-content: center !important;
         justify-content: center !important;
         display: flex;
+      }
+
+      @media screen and (min-width: 820px) and (max-width: 1024px){
+        .time-offer .banner1 img{
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .banner img {
+          width: 100%;
+          height: 100%;
+        }
+        .time-offer .timer {
+          transform: translate(35em, -20em);
+        }
+
+        .time-offer .flat {
+          transform:translate(25em, -17em);
+          width:34em;
+          
+          font-size: 17px;
+         
+        }
+        
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 820px){
+        .time-offer .banner1 img{
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .banner img {
+          width: 100%;
+          height: 100%;
+        }
+        .time-offer .timer {
+          transform: translate(24em, -24em);
+        }
+
+        .time-offer .flat {
+          transform:translate(30em, -29em);
+          width: 28em;
+          height: 20em;
+          font-size: 13px;
+          
+        
+        }
+        .time-offer .flat .no {
+          display: none;
+        }
+        
+      }
+
+      @media screen and (max-width: 480px) {
+        .banner img {
+          width: 100%;
+          height: 100%;
+        }
+        .time-offer .timer  {
+          font-weight: 900 !important;
+          position: relative;
+          transform: translate(3em, 1em) !important;
+          color: rgba(250, 12, 12, 0.881);
+          display: inline-flex;
+          height: fit-content;
+          background: transparent;
+          align-items: center;
+          margin-bottom: 10px !important;
+          padding-bottom: 20px;
+          margin: 0;
+          
+        } 
+        .timer h1 {
+          padding-top: 12px;
+        }
+  
+        .time-offer {
+          background: linear-gradient(135deg, rgb(181, 244, 65), rgb(17, 244, 150));
+          margin: 0;
+          padding: 0;
+          height: fit-content;
+         
+          
+        }
+        .time-offer .flat {
+          text-align: justify;
+          color: green;
+          transform:translate(1em, 0em);
+          background: transparent; 
+          font-size: 13px;
+          width: 25em;
+          align-items: center ;
+        }
+        .time-offer .banner1{
+          width: 100% !important;
+          height: 100% !important;
+        }
+       
       }
 
 
@@ -192,8 +305,6 @@
     </div>
     </div>
 
-   
-
 
     <div class="banner">
         <img src="images/banner1.jpg" alt="Banner image" height="400px" width="100%">
@@ -205,22 +316,22 @@
         </marquee>
     </div>
 
-    <div class="time-offer" style="background-color: green;">
-      <div class="timer">
+    <div class="time-offer">
+      <div class="banner1" style=" display:flex; margin-top:0px; background:transparent; height:400px; width:400px" >
+        <img src="images/time-offer.png" alt="Banner image" height="100%" width="100%">
+       </div>
+    <div class="timer">
         <img src="images/clock.png" alt="Timer" height="60" width="70">
         <h1><b><span id="timer"></span></b></h1>
-         </div>
-      <div class="flat" style="margin-right: 0px; position:absolute; transform:translate(37em, 10em)" >
-      
+    </div>
+      <div class="flat" >
         <h1>Limited Time Offer <b>Flat 10% Off</b></h1>
         <h2>Get groceries at home in <b>15Min.</b></h2>
-        <p style="width: 39em; margin-top:10px;"><b>🛒🌟 Limited Time Grocery Bonanza—fresh deals on all essentials! <br>
-          ⏰🍎 Hurry up and grab your favorites before they're gone! <br>🥕🛍️ Grocery Fiesta Alert – snag fresh essentials with exclusive savings! <br>
-          ⌚🍏 Rush in now; these irresistible deals are vanishing in no time!</b></p>
+        <p ><b>🛒🌟 Limited Time Grocery Bonanza—fresh deals on all essentials! <br>
+          ⏰🍎 Hurry up and grab your favorites before they're gone! <br>🥕🛍️ Grocery Fiesta Alert!fresh essentials with exclusive savings! <br>
+         <span class="no"> ⌚🍏 Rush in now; these irresistible deals are vanishing in no time!</span></b></p>
       </div>
-    <div class="banner" style="max-width: 100% !important; display:flex; margin-left:0%; margin-top:17px; z-index:-9999" >
-      <img src="images/time-offer.png" alt="Banner image" height="400px" style="width: 600px !important;">
-  </div>
+
     </div>
 
     <div id="prod-gros">
@@ -240,9 +351,12 @@
                  <tr> <td><p style="color: rgb(115, 114, 114);">MRP <br>₹266/-</p></td><td><p style="color: black;">Our price <br><b>₹117/-</b></p></td><td style="text-align: right;"><p style=" text-align:center; background-color:greenyellow; color:green; border-radius:10px; padding:3px"><b>25% OFF</b></p></td></tr>
                   </table>
                   <p style="opacity: 0.5; transform:translate(0px, -23px); position:absolute;"><small><i>(All taxes include)</i></small></p>
+                  
 
                   <div class="d-flex justify-content-between align-items-center">
+                  
                     <div class="btn-group">
+                      
                       <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart </button>
                     </div>
                     <small class="text-body-secondary" style="color: rgb(252, 84, 84) !important;"> <b>Hurry up!!</b></small>
