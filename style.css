@@ -38,7 +38,7 @@
   
   /* Sign In / Sign Up Button Styles */
   .navbar .d-flex { 
-    align-items: center;
+    align-items: center !important;
     margin: 0px !important;
   }
   .navbar .d-flex .btn {
